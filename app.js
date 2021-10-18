@@ -28,4 +28,5 @@ mongoose.connect(process.env.DB_CONNECTION, () =>
   console.log("connected to db!!!!!!")
 );
 //listen
-app.listen(3001);
+const port = process.env.PORT || 8000;
+app.listen(port);
