@@ -4,6 +4,7 @@ const SafeScheme = mongoose.Schema({
   safename: {
     type: String,
     required: true,
+    unique: true,
   },
   owner: {
     type: String,
@@ -19,7 +20,8 @@ const SafeScheme = mongoose.Schema({
     required: true,
   },
  secrets: {
-    type: Array
+    type: Array,
+    unique: true,
 },
   date: {
     type: Date,

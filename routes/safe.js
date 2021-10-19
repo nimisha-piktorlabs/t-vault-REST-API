@@ -66,7 +66,9 @@ router.patch("/:safeId", async (req, res) => {
   try {
     const updatedSafe = await Safe.updateOne(
       { _id: req.params.safeId },
-      { $set: { safename: req.body.safename } }
+      { $set: { safename: req.body.safename,
+                owner: req.body.owner, 
+                description: req.body.description } }
     );
     res.json(updatedSafe);
   } catch (err) {
