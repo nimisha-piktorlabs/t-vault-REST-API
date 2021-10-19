@@ -19,7 +19,7 @@ router.post("/", async (req, res) => {
     owner: req.body.owner,
     selectType: req.body.selectType,
     description: req.body.description,
-    secrets:null,
+    // secrets:null,
   });
   //promise
   try {
